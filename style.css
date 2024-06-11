@@ -1,0 +1,585 @@
+img {
+  width: 100%;
+}
+/********************mobil først******************/
+
+.container {
+  position: relative; /* container kan positionere mange steder*/
+  width: fit-content; /* et element til automatisk at tilpasse sin størrelse baseret på indholdets bredde*/
+}
+
+.image-container img {
+  width: 100%; /* Billeder er den rigtige mål */
+  display: block; /* fjerne whitespace om indhold*/
+}
+
+.overlay-text {
+  position: absolute;
+  top: 28%; /* afstand fra top*/
+  left: 50%; /* afstand fra ventre */
+  transform: translate(-50%, -50%); /* dimentioner af teksten */
+  font-size: 7vw; /* størrelse af overskift*/
+  text-align: center; /* text i midten*/
+  font-family: "Major Mono Display", monospace;
+  text-align: center;
+  font-weight: 400; /* tykkelsen af teksten*/
+  color: orangered;
+}
+.indexh6 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 35px;
+  text-align: center;
+  margin-top: -50px; /* Juster denne værdi efter behov */
+}
+.pindex {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: #343232;
+  line-height: 30px; /* mellemrum mellem tekst*/
+  text-align: center;
+}
+
+.blue-line {
+  width: 50%; /* Adjusted width */
+  height: 3px; /* Adjusted height */
+  background-color: #0033a0;
+  margin: 40px auto; /* Adjusted margins and centered */
+  border-radius: 50px;
+}
+.container_arrow {
+  padding-left: 50%;
+}
+.arrow-down {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent; /* grænse omkring */
+  border-right: 10px solid transparent;
+  border-radius: 50px; /* runde hjørner om grænsen*/
+  border-top: 20px solid #0033a0; /* King blue color */
+  margin-bottom: 100px;
+  animation: pulse 1s infinite; /* pulse animation */
+}
+/* Keyframe animationer som bruger scale for at gøre pilsen større og mindre*/
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.indexh3 {
+  text-align: center;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: #343232;
+  line-height: 30px;
+}
+.indexh4 {
+  text-align: center;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: #343232;
+  line-height: 30px;
+}
+
+.indexp {
+  padding-left: 27%;
+  padding-bottom: 15px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: #343232;
+  line-height: 30px;
+}
+
+/***Portfolie**/
+/*** billeder med svg indsat**/
+.portfolioimg {
+  width: 400px;
+  /* height: 50px; */
+  aspect-ratio: 180/70;
+  margin-left: 7%;
+}
+
+.grid_1_1_1_1 {
+  display: grid;
+  margin: 10%;
+}
+
+.grid_1_1_1_1 div {
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /*** skygger og zommer ind**/
+  overflow: hidden; /* Sørger for at indholdet bliver inde i div'en */
+}
+/***billedet ind ei grid **/
+.grid_1_1_1_1 div img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+/* Hover-effekt */
+.grid_1_1_1_1 div:hover img {
+  transform: scale(1.13);
+  filter: brightness(110%);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.portfolioh1 {
+  font-family: "Major Mono Display", monospace;
+  text-align: center;
+  font-size: 4vw;
+  font-weight: 400;
+  margin-top: 5%;
+  margin-bottom: 6%;
+  color: orangered;
+}
+.portfolioh3 {
+  list-style: none;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 10;
+  font-size: 15px;
+  color: #191616;
+  line-height: 30px;
+  text-align: center;
+}
+
+.portfolioh2 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  color: #222020;
+  text-align: center;
+  margin-top: 10%;
+}
+
+/***********emilie********/
+
+.emilieh1 {
+  font-family: "Major Mono Display", monospace;
+  text-align: center;
+  font-size: 4vw;
+  font-weight: 400;
+  margin-top: 5%;
+  margin-bottom: 6%;
+  color: orangered;
+}
+.grid_1_1 {
+  display: grid;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  margin-left: 20px;
+}
+
+.gridE_1_1 {
+  display: grid;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+}
+/***liste**/
+li {
+  list-style: none;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: #343232;
+  margin: 8px 2px 0px;
+  line-height: 30px;
+}
+/***billedet biografi**/
+.imgemilie {
+  max-width: 0%;
+  height: auto;
+  margin-left: 3%;
+}
+.imggrid {
+  width: 300px;
+  height: auto; /* Bevarer billedets proportioner */
+  filter: grayscale(80%);
+}
+.pemilie {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: #343232;
+  line-height: 30px;
+}
+.CV {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  color: #000000;
+}
+
+/**********web**********/
+.webh1 {
+  font-family: "Major Mono Display", monospace;
+  text-align: center;
+  font-size: 3vw;
+  font-weight: 400;
+  margin-top: 5%;
+  margin-bottom: 6%;
+  color: orangered;
+}
+
+/************ANI*************/
+.anih1 {
+  font-family: "Major Mono Display", monospace;
+  text-align: center;
+  font-size: 5vw;
+  font-weight: 400;
+  margin-top: 5%;
+  margin-bottom: 6%;
+  color: orangered;
+}
+/*********UX******************/
+.UXh1 {
+  font-family: "Major Mono Display", monospace;
+  text-align: center;
+  font-size: 5vw;
+  font-weight: 400;
+  margin-top: 5%;
+  margin-bottom: 6%;
+  color: orangered;
+}
+
+/*************indhold******/
+
+.indholdh1 {
+  font-family: "Major Mono Display", monospace;
+  text-align: center;
+  font-size: 5vw;
+  font-weight: 400;
+  margin-top: 5%;
+  margin-bottom: 6%;
+  color: orangered;
+}
+/******UX*****/
+.pux {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-size: 25px;
+  color: #343232;
+  line-height: 30px;
+  text-align: center;
+}
+
+/**** web layout resonsivt design ved brug af media ****/
+@media screen and (min-width: 800px) {
+  .container {
+    position: relative;
+    width: fit-content; /* et element til automatisk at tilpasse sin størrelse baseret på indholdets bredde*/
+  }
+
+  .image-container img {
+    width: 100%; /* billeder har den rigtige proportioner */
+    display: block; /* fjerner white space */
+  }
+
+  .overlay-text {
+    position: absolute;
+    top: 45%; /*fra toppen*/
+    left: 50%; /* venstre side*/
+    transform: translate(-50%, -50%); /* dimentioner af teksten */
+    font-size: 7vw; /* størrelse på teksten*/
+    text-align: center; /* i midt */
+    font-family: "Major Mono Display", monospace;
+    text-align: center;
+    font-weight: 400;
+    color: orangered;
+  }
+  .indexh6 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 5vw;
+    text-align: center;
+  }
+
+  .blue-line {
+    width: 50%; /* dimentioner linjen */
+    height: 3px;
+    background-color: #0033a0;
+    border-radius: 50px; /* runde hjørner */
+  }
+  .container_arrow {
+    padding-left: 50%; /* placering af pil*/
+  }
+  .arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-radius: 50px;
+    border-top: 20px solid #0033a0;
+    margin-bottom: 100px;
+    animation: pulse 1s infinite; /* pulse animation */
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.6);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  .pindex {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+    color: #343232;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  /***Portfolie**/
+  .portfolie_container {
+    display: grid;
+    gap: 10px;
+  }
+  .grid_1_1_1_1 {
+    display: grid; /* grid formationer deler siden op i div */
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* kolonner */
+    margin: 70px;
+    padding: 20px;
+    align-items: center;
+  }
+
+  .grid_1_1_1_1 div {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* transition Denne egenskab specificere overgange for ændringer i CSS-egenskaber.*/
+    /*transform CSS-egenskab, som anvendes til at anvende 2D eller 3D transformationer til et element*/
+    overflow: hidden; /* Sørger for at indholdet bliver inde i div'en */
+  }
+
+  .grid_1_1_1_1 div img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+
+  /* Hover-effekt */
+  .grid_1_1_1_1 div:hover img {
+    transform: scale(1.13);
+    filter: brightness(110%);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .portfolioh1 {
+    font-family: "Major Mono Display", monospace;
+    text-align: center;
+    font-size: 3.5vw;
+    font-weight: 400;
+    margin-top: 4%;
+    margin-bottom: 6%;
+    color: orangered;
+  }
+  .portfolioh3 {
+    list-style: none;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 30;
+    font-size: 15px;
+    color: #191616;
+    line-height: 30px;
+    text-align: center;
+  }
+  .portfolioimg {
+    width: 600px;
+    /* height: 50px; */
+    aspect-ratio: 180/70;
+    margin-left: 30%;
+  }
+
+  .portfolioh2 {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: #222020;
+    text-align: center;
+    margin-top: 10%;
+  }
+
+  /***********emilie********/
+
+  .emilieh1 {
+    font-family: "Major Mono Display", monospace;
+    text-align: center;
+    font-size: 4vw;
+    font-weight: 400;
+    margin-top: 5%;
+    margin-bottom: 6%;
+    color: orangered;
+  }
+  .grid_1_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .gridE_1_1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 30px;
+    background-image: url("grafik/e.bag.png"); /* baggrundsbillede */
+    background-size: cover; /* Tilpasser billedet så det dækker hele området */
+    background-position: center; /* Centrerer billedet */
+    padding: 20px; /* Tilføjer noget indre margin */
+  }
+
+  li {
+    list-style: none;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: #343232;
+    margin: 8px 2px 0px;
+    line-height: 30px;
+  }
+  .imgemilie {
+    max-width: 100%;
+    height: auto;
+  }
+  .imggrid {
+    width: 380px; /* Indstiller bredden*/
+    height: auto; /* Bevarer billedets proportioner */
+    border-radius: 0%; /* Giver billedet runde kanter*/
+    padding-left: 40%;
+    filter: grayscale(80%);
+  }
+  .pemilie {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: #343232;
+    line-height: 30px;
+  }
+  .CV {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    color: #000000;
+  }
+  .collapsible {
+    font-family: "Josefin Sans", sans-serif;
+    background-color: #fffdfd;
+    color: #0033a0;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none; /*gennemsigt grænse*/
+    text-align: center;
+    outline: none;
+    font-size: 20px;
+    transition: padding 0.2s, font-size 0.2s;
+  }
+
+  .active,
+  .collapsible:hover {
+    background-color: #bfb7b7;
+  }
+
+  .content {
+    font-family: "Josefin Sans", sans-serif;
+    padding: 0 10px;
+    display: none;
+    overflow: hidden; /*  indhold, der strækker sig ud over elementets bredde og højde, vil blive skjult og ikke være synligt.*/
+    background-color: #f1f1f1;
+  }
+  /**********web**********/
+  .webh1 {
+    font-family: "Major Mono Display", monospace;
+    text-align: center;
+    font-size: 3vw;
+    font-weight: 400;
+    margin-top: 5%;
+    margin-bottom: 6%;
+    color: orangered;
+  }
+
+  .link-button {
+    font-family: "Josefin Sans", sans-serif;
+    align-items: center;
+    text-align: center;
+    padding: 10px 20px;
+    margin: 60px;
+    font-size: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    border: orangered;
+  }
+
+  .link-button:hover {
+    text-decoration: underline;
+  }
+  /************ANI*************/
+  .anih1 {
+    font-family: "Major Mono Display", monospace;
+    text-align: center;
+    font-size: 5vw;
+    font-weight: 400;
+    margin-top: 5%;
+    margin-bottom: 6%;
+    color: orangered;
+  }
+  .anih5 {
+    text-align: center;
+  }
+
+  /*********UX******************/
+  .UXh1 {
+    font-family: "Major Mono Display", monospace;
+    text-align: center;
+    font-size: 5vw;
+    font-weight: 400;
+    margin-top: 5%;
+    margin-bottom: 6%;
+    color: orangered;
+  }
+
+  /*************indhold******/
+
+  .indholdh1 {
+    font-family: "Major Mono Display", monospace;
+    text-align: center;
+    font-size: 5vw;
+    font-weight: 400;
+    margin-top: 5%;
+    margin-bottom: 6%;
+    color: orangered;
+  }
+
+  /******UX*****/
+  .pux {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+    font-size: 25px;
+    color: #343232;
+    line-height: 30px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,203 @@
+/* menu */
+header {
+  display: flex; /*Gør header-elementet til en flex-container, så man kan udnytte fleksible layoutegenskaber.*/
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.logo img {
+  width: 310px;
+  /* height: 50px; */
+  aspect-ratio: 100/35;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex; /*Gør menu-elementet til en flex-container.*/
+  list-style: none; /*Fjerner standardliste-stilen*/
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-right: 20px; /*Tilføjer 20 pixels højremargen til hver menu.*/
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  font-size: xx-large;
+}
+
+.menu li:last-child {
+  margin-right: 0;
+}
+
+.menu a {
+  display: block;
+  padding: 10px;
+  color: #111010;
+  text-decoration: none;
+  transition: color 0.3s;
+  text-align: end;
+  font-weight: bolder;
+}
+
+.menu a:hover {
+  color: rgb(146, 127, 127);
+}
+/*Sætter dimensionerne for burgerikonet.*/
+.burger {
+  width: 30px;
+  height: 20px;
+  cursor: pointer; /*Ændrer markøren til en hånd, når musen er over ikonet.*/
+}
+
+/*laver til en linke med 3*/
+.burger .line {
+  width: 100%;
+  height: 2px;
+  background-color: #333;
+  margin-bottom: 5px;
+  transition: 0.2s linear;
+}
+.burger {
+  display: none;
+}
+/* med meida -  målretter enheder med en skærmbredde på maks. 800 pixels.*/
+@media screen and (max-width: 800px) {
+  .menu {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+  /*Når burger-ikonet er aktivt (fx ved klik), roterer og flytter den første linje (af tre) 
+  45 grader og oversætter den 5 pixels til højre og ned. 
+  Overgangen sker lineært over 0.2 sekunder.*/
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.2s linear;
+  }
+
+  /*Når burger-ikonet er aktivt, gør denne regel den anden linje 
+  fuldstændig gennemsigtig (usynlig) over 0.15 sekunder med en lineær overgang*/
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+  /*Når burger-ikonet er aktivt, roterer og flytter den tredje linje -45 grader 
+  og oversætter den 5 pixels til højre og op. Overgangen sker lineært over 0.2 sekunder.*/
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.2s linear;
+  }
+
+  nav.active .menu {
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+  /*Når navigationen er aktiv, får hvert listeelement (li)
+   i menuen en margen på 10 pixels øverst og nederst, og 20 pixels til venstre og højre.*/
+  nav.active .menu li {
+    margin: 10px 20px;
+  }
+
+  nav.active .menu a {
+    font-size: 24px;
+  }
+}
+
+.footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #fff;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 13px;
+  color: #5c5858;
+  text-align: center;
+  margin-top: 30px;
+}
+
+/********tilbage knap***********/
+
+.cta-button {
+  /*Elementet vises som en inline-flex container, hvilket kombinerer egenskaberne 
+  fra både inline og flex display-typer*/
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #000000;
+  background-color: #d3cdcd;
+  text-decoration: none; /*Fjerner understregning af teksten.*/
+  border-radius: 5px;
+  transition: background-color 0.3s; /*Baggrundsfarven ændres over 0.3 sekunder, når der sker en ændring.*/
+  margin-left: 8%;
+}
+
+.cta-button .back-symbol {
+  margin-right: 10px;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 20px;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}
+
+/*****LINK ****/
+.link-button a {
+  display: inline-block;
+  padding: 10px 10px; /* Indvendig margen (padding) er 10px både horisontalt og vertikalt.*/
+  background-color: orangered;
+  color: rgb(5, 5, 6);
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background-color 0.3s ease; /*Baggrundsfarven ændres over 0.3 sekunder med en ease transition, når der sker en ændring.*/
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 20px;
+  margin-left: 2%;
+  text-align: center;
+}
+
+.link-button a:hover {
+  background-color: darkorange;
+}
+/******fold ud *****/
+.collapsible {
+  font-family: "Josefin Sans", sans-serif;
+  background-color: #fffdfd;
+  color: #0033a0;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 20px;
+  transition: padding 0.2s, font-size 0.2s;
+}
+
+.active,
+.collapsible:hover {
+  background-color: #bfb7b7; /* Baggrundsfarven ændres til en lys grå, når elementet enten har klassen .active eller når musen hover over det*/
+}
+
+.content {
+  font-family: "Josefin Sans", sans-serif;
+  padding: 0 10px;
+  display: none; /*det vises ikke som standard*/
+  overflow: hidden; /*Eventuelt indhold, der overskrider elementets dimensioner, skjules.*/
+  background-color: #f1f1f1;
+}
